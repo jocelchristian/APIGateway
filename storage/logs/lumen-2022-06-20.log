@@ -1,0 +1,87 @@
+[2022-06-20 01:39:59] local.ERROR: Client error: `GET http://localhost:8000/users/5` resulted in a `404 Not Found` response:
+{"error":"Does not exist any instance of \n            user with the given id","code":404}
+ {"exception":"[object] (GuzzleHttp\\Exception\\ClientException(code: 404): Client error: `GET http://localhost:8000/users/5` resulted in a `404 Not Found` response:
+{\"error\":\"Does not exist any instance of \
+            user with the given id\",\"code\":404}
+ at C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php:113)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(69): GuzzleHttp\\Exception\\RequestException::create(Object(GuzzleHttp\\Psr7\\Request), Object(GuzzleHttp\\Psr7\\Response), NULL, Array, NULL)
+#1 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(204): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Response))
+#2 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(153): GuzzleHttp\\Promise\\Promise::callHandler(1, Object(GuzzleHttp\\Psr7\\Response), NULL)
+#3 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\TaskQueue.php(48): GuzzleHttp\\Promise\\Promise::GuzzleHttp\\Promise\\{closure}()
+#4 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(248): GuzzleHttp\\Promise\\TaskQueue->run(true)
+#5 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(224): GuzzleHttp\\Promise\\Promise->invokeWaitFn()
+#6 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(269): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#7 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(226): GuzzleHttp\\Promise\\Promise->invokeWaitList()
+#8 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(62): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#9 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(187): GuzzleHttp\\Promise\\Promise->wait()
+#10 C:\\xampp\\htdocs\\ddsgateway\\app\\traits\\ConsumesExternalService.php(18): GuzzleHttp\\Client->request('GET', '/users/5', Array)
+#11 C:\\xampp\\htdocs\\ddsgateway\\app\\Services\\User1Service.php(27): App\\Services\\User1Service->performRequest('GET', '/users/5')
+#12 C:\\xampp\\htdocs\\ddsgateway\\app\\Http\\Controllers\\User1Controller.php(51): App\\Services\\User1Service->obtainUsers1('5')
+#13 C:\\xampp\\htdocs\\ddsgateway\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\User1Controller->show('5')
+#14 C:\\xampp\\htdocs\\ddsgateway\\vendor\\illuminate\\container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\xampp\\htdocs\\ddsgateway\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\xampp\\htdocs\\ddsgateway\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\ddsgateway\\vendor\\illuminate\\container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(389): Illuminate\\Container\\Container->call(Array, Array)
+#19 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(355): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#20 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(329): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\User1Controller), 'show', Array)
+#21 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(282): Laravel\\Lumen\\Application->callControllerAction(Array)
+#22 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(267): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(237): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#24 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(173): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#25 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(429): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#26 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(175): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#28 C:\\xampp\\htdocs\\ddsgateway\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#29 {main}
+"} 
+[2022-06-20 02:26:28] local.ERROR: Maximum execution time of 30 seconds exceeded {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 30 seconds exceeded at C:\\xampp\\htdocs\\ddsgateway\\app\\Http\\Controllers\\Controller.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2022-06-20 02:27:31] local.ERROR: Maximum execution time of 30 seconds exceeded {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 30 seconds exceeded at C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\CurlFactory.php:563)
+[stacktrace]
+#0 {main}
+"} 
+[2022-06-20 02:31:51] local.ERROR: Maximum execution time of 30 seconds exceeded {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 30 seconds exceeded at C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\guzzle\\src\\Handler\\CurlFactory.php:563)
+[stacktrace]
+#0 {main}
+"} 
+[2022-06-20 02:32:30] local.ERROR: Server error: `PUT http://localhost:8000/users/1` resulted in a `500 Internal Server Error` response:
+<!-- SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'username' at row 1 (SQL: update `tblu (truncated...)
+ {"exception":"[object] (GuzzleHttp\\Exception\\ServerException(code: 500): Server error: `PUT http://localhost:8000/users/1` resulted in a `500 Internal Server Error` response:
+<!-- SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'username' at row 1 (SQL: update `tblu (truncated...)
+ at C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php:113)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php(69): GuzzleHttp\\Exception\\RequestException::create(Object(GuzzleHttp\\Psr7\\Request), Object(GuzzleHttp\\Psr7\\Response), NULL, Array, NULL)
+#1 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(204): GuzzleHttp\\Middleware::GuzzleHttp\\{closure}(Object(GuzzleHttp\\Psr7\\Response))
+#2 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(153): GuzzleHttp\\Promise\\Promise::callHandler(1, Object(GuzzleHttp\\Psr7\\Response), NULL)
+#3 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\TaskQueue.php(48): GuzzleHttp\\Promise\\Promise::GuzzleHttp\\Promise\\{closure}()
+#4 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(248): GuzzleHttp\\Promise\\TaskQueue->run(true)
+#5 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(224): GuzzleHttp\\Promise\\Promise->invokeWaitFn()
+#6 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(269): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#7 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(226): GuzzleHttp\\Promise\\Promise->invokeWaitList()
+#8 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\promises\\src\\Promise.php(62): GuzzleHttp\\Promise\\Promise->waitIfPending()
+#9 C:\\xampp\\htdocs\\ddsgateway\\vendor\\guzzlehttp\\guzzle\\src\\Client.php(187): GuzzleHttp\\Promise\\Promise->wait()
+#10 C:\\xampp\\htdocs\\ddsgateway\\app\\traits\\ConsumesExternalService.php(18): GuzzleHttp\\Client->request('PUT', '/users/1', Array)
+#11 C:\\xampp\\htdocs\\ddsgateway\\app\\Services\\User1Service.php(31): App\\Services\\User1Service->performRequest('PUT', '/users/1', Array)
+#12 C:\\xampp\\htdocs\\ddsgateway\\app\\Http\\Controllers\\User1Controller.php(59): App\\Services\\User1Service->editUser1(Array, '1')
+#13 C:\\xampp\\htdocs\\ddsgateway\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\User1Controller->update(Object(Laravel\\Lumen\\Http\\Request), '1')
+#14 C:\\xampp\\htdocs\\ddsgateway\\vendor\\illuminate\\container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\xampp\\htdocs\\ddsgateway\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\xampp\\htdocs\\ddsgateway\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\ddsgateway\\vendor\\illuminate\\container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(389): Illuminate\\Container\\Container->call(Array, Array)
+#19 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(355): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#20 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(329): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\User1Controller), 'update', Array)
+#21 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(282): Laravel\\Lumen\\Application->callControllerAction(Array)
+#22 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(267): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#23 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(237): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#24 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(173): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#25 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(429): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#26 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(175): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#27 C:\\xampp\\htdocs\\ddsgateway\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#28 C:\\xampp\\htdocs\\ddsgateway\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#29 {main}
+"} 
